@@ -1,4 +1,4 @@
-# TSSCI Q1 法學引註格式檢索
+# TSSCI Tier 1 法學引註格式檢索
 
 > 本專案不是由國科會或法律學門各 TSSCI 一級期刊提供，只整理其公告的引註格式，建立非官方檢索平台，方便參考。如有疑義，請以官方公告文件為準。
 
@@ -10,7 +10,7 @@
 
 ## 如何查閱
 
-請點選〈[TSSCI Q1 法學引註格式](https://legalcite.zhenhuang.tw/)〉來查看。網站首頁簡要介紹專案，查詢頁面則提供依語言、依參考文獻類型來顯示的篩選功能。
+請點選〈[TSSCI Tier 1 法學引註格式](https://legalcite.zhenhuang.tw/)〉來查看。網站首頁簡要介紹專案，查詢頁面則提供依語言、依參考文獻類型來顯示的篩選功能。
 
 ## Tech Stack
 
@@ -24,7 +24,7 @@
 ## 目錄結構
 
 ```
-tssci-q1-legal-citation-web/
+tssci-tier1-legal-citation-web/
 ├── app/
 │   ├── assets/
 │   │   └── css/

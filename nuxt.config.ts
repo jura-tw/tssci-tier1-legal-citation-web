@@ -20,7 +20,7 @@ export default defineNuxtConfig({
           content: '臺灣 TSSCI 一級法學期刊共同制定的引註格式查詢（非官方）。',
         },
       ],
-      title: 'TSSCI Q1 法學引註格式檢索',
+      title: 'TSSCI T1 法學引註格式檢索',
       link: [
         {
           rel: 'apple-touch-icon',
