@@ -36,7 +36,11 @@
           <strong>{{ key }}</strong>
           <blockquote v-for="(ex, j) in asArray(val as string | string[])" :key="j">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <span v-html="ex" class="rule-example" />
+            <span
+              v-html="ex"
+              :class="isJapaneseExample ? 'rule-example ja-text' : 'rule-example'"
+              :lang="isJapaneseExample ? 'ja' : undefined"
+            />
           </blockquote>
         </div>
       </template>
@@ -48,7 +52,11 @@
           <strong>{{ group.type }}</strong>
           <blockquote v-for="(ex, ei) in asArray(group.example)" :key="ei">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <span v-html="ex" class="rule-example" />
+            <span
+              v-html="ex"
+              :class="isJapaneseExample ? 'rule-example ja-text' : 'rule-example'"
+              :lang="isJapaneseExample ? 'ja' : undefined"
+            />
           </blockquote>
         </template>
       </template>

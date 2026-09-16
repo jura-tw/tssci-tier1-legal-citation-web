@@ -28,7 +28,11 @@
       <template v-if="typeof rule.example === 'string' || Array.isArray(rule.example)">
         <blockquote v-for="(ex, i) in asArray(rule.example)" :key="i">
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <span v-html="ex" class="rule-example" />
+          <span
+            v-html="ex"
+            :class="isJapaneseExample ? 'rule-example ja-text' : 'rule-example'"
+            :lang="isJapaneseExample ? 'ja' : undefined"
+          />
         </blockquote>
       </template>
 
@@ -38,7 +42,11 @@
           <strong>{{ key }}</strong>
           <blockquote v-for="(ex, j) in asArray(val as string | string[])" :key="j">
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <span v-html="ex" class="rule-example" />
+            <span
+              v-html="ex"
+              :class="isJapaneseExample ? 'rule-example ja-text' : 'rule-example'"
+              :lang="isJapaneseExample ? 'ja' : undefined"
+            />
           </blockquote>
         </div>
       </template>
@@ -55,6 +63,8 @@ import type { CitationRule } from '~/types/citation'
 const props = defineProps<{ rule: CitationRule }>()
 
 const isPureDesc = computed(() => !props.rule.name && !!props.rule.description)
+
+const isJapaneseExample = computed(() => props.rule.code.startsWith('5.'))
 
 const depth = computed(() => props.rule.code.split('.').filter(Boolean).length)
 
