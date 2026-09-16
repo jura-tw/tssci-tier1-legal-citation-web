@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
-const ASSET_BASE_URL = 'https://assets.zhenhuang.tw/legal-citation/web-viewer-favicon'
+const ASSET_BASE_URL = 'https://jura.tw/favicon'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-28',
   future: { compatibilityVersion: 4 },
   devtools: { enabled: true },
   modules: ['@nuxt/content', '@nuxt/fonts'],
-  css: ['@picocss/pico/css/pico.fluid.classless.pumpkin.min.css', '~/assets/css/main.css'],
+  css: ['@picocss/pico/css/pico.fluid.classless.min.css', '~/assets/css/main.css'],
   typescript: {
     strict: true,
   },
