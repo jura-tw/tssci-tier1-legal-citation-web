@@ -70,6 +70,12 @@ export default defineNuxtConfig({
         weights: [500, 700],
         styles: ['normal'],
       },
+      {
+        name: 'Noto Sans JP',
+        provider: 'bunny',
+        weights: [500, 700],
+        styles: ['normal'],
+      },
     ],
   },
 })
