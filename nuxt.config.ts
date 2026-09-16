@@ -71,6 +71,12 @@ export default defineNuxtConfig({
         styles: ['normal'],
       },
       {
+        name: 'Noto Serif JP',
+        provider: 'bunny',
+        weights: [500, 700],
+        styles: ['normal'],
+      },
+      {
         name: 'Noto Sans JP',
         provider: 'bunny',
         weights: [500, 700],

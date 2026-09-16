@@ -25,6 +25,10 @@ span.ja-text {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+span.rule-example.ja-text {
+  font-family: 'Gentium Book Basic', 'Noto Serif JP', serif;
+}
+
 /* ---- AppHeader sticky ---- */
 header[data-sticky] {
   position: sticky;

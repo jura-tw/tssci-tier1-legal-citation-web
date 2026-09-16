@@ -22,7 +22,11 @@
       <template v-if="typeof rule.example === 'string' || Array.isArray(rule.example)">
         <blockquote v-for="(ex, i) in asArray(rule.example)" :key="i">
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <span v-html="ex" class="rule-example" />
+          <span
+            v-html="ex"
+            :class="isJapaneseExample ? 'rule-example ja-text' : 'rule-example'"
+            :lang="isJapaneseExample ? 'ja' : undefined"
+          />
         </blockquote>
       </template>
 
@@ -62,7 +66,9 @@
 <script setup lang="ts">
 import type { CitationRule } from '~/types/citation'
 
-defineProps<{ rule: CitationRule }>()
+const props = defineProps<{ rule: CitationRule }>()
+
+const isJapaneseExample = computed(() => props.rule.code.startsWith('5.'))
 
 const isMobile = ref(false)
 
